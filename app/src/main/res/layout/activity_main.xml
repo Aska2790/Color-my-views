@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/indent_2x"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/boxOneTextView"
+        style="@style/BoxTextStyle"
+        android:text="@string/content_text_view_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/boxTwoTextView"
+        style="@style/BoxTextStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/content_text_view_two"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/boxOneTextView" />
+
+    <TextView
+        android:id="@+id/boxThreeTextView"
+        style="@style/BoxTextStyle"
+        android:layout_marginStart="16dp"
+        android:text="@string/content_text_view_three"
+        app:layout_constraintBottom_toTopOf="@+id/boxFourTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boxTwoTextView"
+        app:layout_constraintTop_toTopOf="@+id/boxTwoTextView" />
+
+    <TextView
+        android:id="@+id/boxFourTextView"
+        style="@style/BoxTextStyle"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/content_text_view_four"
+        app:layout_constraintBottom_toTopOf="@+id/boxFiveTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boxTwoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/boxThreeTextView" />
+
+    <TextView
+        android:id="@+id/boxFiveTextView"
+        style="@style/BoxTextStyle"
+        android:layout_marginStart="16dp"
+        android:text="@string/content_text_view_three"
+        app:layout_constraintBottom_toBottomOf="@+id/boxTwoTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/boxTwoTextView"
+        app:layout_constraintTop_toBottomOf="@+id/boxFourTextView" />
+
+    <TextView
+        android:id="@+id/howToPlayTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_text_view_how_to_play"
+        app:layout_constraintBaseline_toBaselineOf="@+id/infoTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/content_text_view_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/howToPlayTextView"
+        app:layout_constraintTop_toBottomOf="@+id/boxFiveTextView" />
+
+    <TextView
+        android:id="@+id/secondButton"
+        style="@style/BoxStyle"
+        android:text="@string/content_button_two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/thirdButton"
+        app:layout_constraintStart_toEndOf="@+id/firstButton"
+        app:layout_constraintTop_toBottomOf="@+id/infoTextView"
+        app:layout_constraintVertical_bias="0.858" />
+
+    <TextView
+        android:id="@+id/firstButton"
+        style="@style/BoxStyle"
+        android:text="@string/content_button_one"
+        app:layout_constraintBaseline_toBaselineOf="@+id/secondButton"
+        app:layout_constraintEnd_toStartOf="@+id/secondButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/thirdButton"
+        style="@style/BoxStyle"
+        android:text="@string/content_button_three"
+        app:layout_constraintBaseline_toBaselineOf="@+id/secondButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
